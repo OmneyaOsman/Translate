@@ -1,4 +1,4 @@
-package com.plcoding.translator_kmm.translate.data.remote
+package com.omni.myapplication.translate.data.remote
 
 import io.ktor.client.*
 import io.ktor.client.engine.android.*
