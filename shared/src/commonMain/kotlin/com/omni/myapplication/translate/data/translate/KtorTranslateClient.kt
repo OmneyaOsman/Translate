@@ -1,10 +1,9 @@
-package com.plcoding.translator_kmm.translate.data.translate
+package com.omni.myapplication.translate.data.translate
 
-//import com.plcoding.translator_kmm.NetworkConstants
 import com.plcoding.translator_kmm.core.domain.language.Language
-import com.plcoding.translator_kmm.translate.domain.translate.TranslateClient
-import com.plcoding.translator_kmm.translate.domain.translate.TranslateError
-import com.plcoding.translator_kmm.translate.domain.translate.TranslateException
+import com.omni.myapplication.translate.domain.translate.TranslateClient
+import com.omni.myapplication.translate.domain.translate.TranslateError
+import com.omni.myapplication.translate.domain.translate.TranslateException
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*

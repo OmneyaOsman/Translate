@@ -1,4 +1,4 @@
-package com.plcoding.translator_kmm.translate.domain.translate
+package com.omni.myapplication.translate.domain.translate
 
 import com.plcoding.translator_kmm.core.domain.language.Language
 

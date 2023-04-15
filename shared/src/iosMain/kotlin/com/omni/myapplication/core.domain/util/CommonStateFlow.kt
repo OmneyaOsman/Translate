@@ -1,4 +1,4 @@
-package com.plcoding.translator_kmm.core.domain.util
+package com.omni.myapplication.core.domain.util
 
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.StateFlow
