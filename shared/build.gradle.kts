@@ -82,3 +82,10 @@ android {
         targetSdk = 33
     }
 }
+
+sqldelight{
+    database("translateDatabase"){
+        packageName ="com.omni.myapplication.database"
+        sourceFolders = listOf("sqldelight")
+    }
+}
