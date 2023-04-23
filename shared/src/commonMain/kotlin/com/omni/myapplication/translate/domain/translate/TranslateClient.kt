@@ -1,6 +1,6 @@
 package com.omni.myapplication.translate.domain.translate
 
-import com.plcoding.translator_kmm.core.domain.language.Language
+import com.omni.myapplication.core.domain.language.Language
 
 interface TranslateClient {
     suspend fun translate(

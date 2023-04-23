@@ -1,6 +1,6 @@
 package com.omni.myapplication.translate.data.translate
 
-import com.plcoding.translator_kmm.core.domain.language.Language
+import com.omni.myapplication.core.domain.language.Language
 import com.omni.myapplication.translate.domain.translate.TranslateClient
 import com.omni.myapplication.translate.domain.translate.TranslateError
 import com.omni.myapplication.translate.domain.translate.TranslateException

@@ -3,7 +3,7 @@ package com.omni.myapplication.translate.domain.translate
 import com.omni.myapplication.core.domain.util.Resource
 import com.omni.myapplication.translate.domain.history.HistoryDataSource
 import com.omni.myapplication.translate.domain.history.HistoryItem
-import com.plcoding.translator_kmm.core.domain.language.Language
+import com.omni.myapplication.core.domain.language.Language
 
 class Translate(
     private val client: TranslateClient,
