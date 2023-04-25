@@ -1,19 +1,25 @@
 package com.omni.myapplication.android
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.omni.myapplication.android.core.presentation.Routes
 import com.omni.myapplication.android.translate.presentation.AndroidTranslateViewModel
-import com.omni.myapplication.android.translate.presentation.components.SwapLanguageButton
-import com.omni.myapplication.translate.presentation.TranslateEvent
+import com.omni.myapplication.android.translate.presentation.TranslateScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,17 +29,24 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                    TranslateRoot()
                 }
             }
         }
     }
 }
 
-
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
-@Preview
 @Composable
-fun DefaultPreview() {
-    TranslateTheme {
+fun TranslateRoot() {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = Routes.TRANSLATE) {
+        composable(route = Routes.TRANSLATE) {
+            val viewModel = hiltViewModel<AndroidTranslateViewModel>()
+            val state by viewModel.state.collectAsState()
+            TranslateScreen(state = state, onEvent = viewModel::onEvent)
+        }
     }
 }
+
+
+
